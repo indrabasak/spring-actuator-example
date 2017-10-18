@@ -1,7 +1,7 @@
 package com.basaki.config;
 
-import com.basaki.actuator.MyHealthEndpoint;
-import com.basaki.actuator.MyHealthWebEndpointExtension;
+import com.basaki.actuate.myhealth.MyHealthEndpoint;
+import com.basaki.actuate.myhealth.MyHealthWebEndpointExtension;
 import org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnEnabledEndpoint;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;

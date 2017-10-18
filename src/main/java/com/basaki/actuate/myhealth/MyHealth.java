@@ -1,4 +1,4 @@
-package com.basaki.actuator;
+package com.basaki.actuate.myhealth;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonInclude;

@@ -4,12 +4,10 @@ import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import java.util.Map;
 import lombok.Data;
-import org.springframework.boot.actuate.health.Health;
-import org.springframework.boot.actuate.health.HealthIndicator;
-import org.springframework.boot.actuate.health.Status;
 
 /**
- * {@code MyHealth} is the model containing information exposed bt /myhealth endpoint.
+ * {@code MyHealth} is the model containing information exposed bt /myhealth
+ * endpoint.
  * <p>
  *
  * @author Christian Dupuis

@@ -5,7 +5,7 @@
 Spring Boot 2.0 Actuator Examples
 =======================================
 
-[Spring Boot 2.0](https://spring.io/blog/2017/08/22/introducing-actuator-endpoints-in-spring-boot-2-0) 
+[Spring Actuator](https://spring.io/blog/2017/08/22/introducing-actuator-endpoints-in-spring-boot-2-0) 
 with [Spring Boot 2.0](https://docs.spring.io/spring-boot/docs/2.0.0.M5/reference/htmlsingle/) examples.
 
 - Example of a Spring Boot 2.0 custom Actuator endpoint

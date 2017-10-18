@@ -1,0 +1,22 @@
+info:
+  artifact: spring-actuator-example
+  name: Spring Boot Actuator Example
+  description: Spring Boot Actuator Example
+  version: 1.0.0
+
+endpoints:
+  default:
+    enabled: true
+  health:
+    enabled: true
+  metrics:
+    enabled: true
+  loggers:
+    enabled: true
+  myhealth:
+    enabled: true
+
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS

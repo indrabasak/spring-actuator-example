@@ -23,7 +23,7 @@ public class MyHealthWebEndpointExtension {
 
     @ReadOperation
     public WebEndpointResponse<MyHealth> getHealth() {
-        MyHealth health = this.delegate.health();
+        MyHealth health = delegate.health();
         return new WebEndpointResponse<>(health, 200);
     }
 }

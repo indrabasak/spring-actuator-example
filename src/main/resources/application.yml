@@ -4,6 +4,7 @@ info:
   description: Spring Boot Actuator Example
   version: 1.0.0
 
+#actuator endpoints
 endpoints:
   default:
     enabled: true
@@ -13,10 +14,27 @@ endpoints:
     enabled: true
   loggers:
     enabled: true
+  #custom endpoint
   myhealth:
     enabled: true
+
+#spring:
+#  metrics:
+#    web:
+#      server:
+#        auto-time-requests: true
 
 spring:
   output:
     ansi:
       enabled: ALWAYS
+  metrics:
+    simple:
+      enabled: true
+    statsd:
+      enabled: true
+    web:
+      server:
+        auto-time-requests: true
+#    use-global-registry: true
+

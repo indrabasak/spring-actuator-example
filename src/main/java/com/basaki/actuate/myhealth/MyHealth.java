@@ -10,9 +10,8 @@ import lombok.Data;
  * endpoint.
  * <p>
  *
- * @author Christian Dupuis
- * @author Phillip Webb
- * @since 1.1.0
+ * @author Indra Basak
+ * @since 10/17/17
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_EMPTY)

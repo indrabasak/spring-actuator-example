@@ -1,13 +1,16 @@
-# Travis Build File
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
 before_script:
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+- mvn clean install sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=indrabasak-github
+-Dsonar.login=$SONAR_TOKEN
 script: mvn clean compile test
 notifications:
   email:
-    - indra.basak1@gmail.com
+  - indra.basak1@gmail.com
   on_success: change
   on_failure: always
   use_notice: true
+env:
+  global:
+    secure: e5GRzYNxe/UuVZdkq1K/EcQsTHitctV2Pswp7fB0593exMcLsWZxkpZhMD1Gy40DU5P9IqpbAMi0+iBnRjlHReamRa5E//tS3d/MiM/lOTKsM9EvC2g7LRxAmqkC3vHkcJ4wCDimzMmnAcoH4HQsJE/hyRD4GVuWq1P5PQVhfYwgzvNeA1PuWLFgwLYIhGnLqg9HFtVZD5oKtDm/LVlJoE6vdBJFUvizwRHJdMz7+uTZcHgeWzEi3RxMTnHt6DPsS3JZUUHuYFIXcvBj23B9Mcb9Enfv91WDvpeaf1iFdNE1ppBEqY76B8bwFFKhI3bIzFbVgijKjKmJk9j4+ATCxG0gHnOnjWSBXiJvx9dDeTvEY6kRN3Ud9Rb6lpbd6iBDKK9zMWJ/nDQc7EGKZwF19v3GJKWh7nIA+y0kfNjeoTgshNQAnB6LMU3N96Q/fWp5x7Uk0PGwR6EatXjvDZ4x4RHxcFdifiR8KLyw4dMhS6U5aPEd9yZFCI5N/fZX9lTvVB2Kk9ISHgYLkSzsrrQn3V6OLqLJa5Lo6J9hNt4m1qIwFZbc0v6WsJueQ7BdLQfE7ns17usrUdmmHyYvfGc3LMrQ6nFhmzFMZ0gbwGr/h8PyHn/FUvYOnM9vD3tOid8d8BrzC0exQcLEjepBgXcVUwXWRzicy2LWIR1MEgF6AQg=

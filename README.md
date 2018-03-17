@@ -1,4 +1,7 @@
 [![Build Status][travis-badge]][travis-badge-url]
+[![Quality Gate][sonarqube-badge]][sonarqube-badge-url] 
+[![Technical debt ratio][technical-debt-ratio-badge]][technical-debt-ratio-badge-url] 
+[![Coverage][coverage-badge]][coverage-badge-url]
 
 ![](./img/spring-boot.png)
 
@@ -6,7 +9,7 @@ Spring Boot 2.0 Actuator Examples
 =======================================
 
 [Spring Actuator](https://spring.io/blog/2017/08/22/introducing-actuator-endpoints-in-spring-boot-2-0) 
-with [Spring Boot 2.0](https://docs.spring.io/spring-boot/docs/2.0.0.M5/reference/htmlsingle/) examples.
+with [Spring Boot 2.0](https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#production-ready-endpoints-custom) examples.
 
 - Example of a Spring Boot 2.0 custom Actuator endpoint
 
@@ -24,28 +27,31 @@ java -jar target/spring-actuator-example-1.0.0.jar
 
 You should notice the application starting up,
 ```
-
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
   '  |____| .__|_| |_|_| |_\__, | / / / /
  =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::             (v2.0.0.M5)
-
-2017-10-17 22:24:19.762  INFO 22844 --- [           main] com.basaki.Application                   : Starting Application on jdoe-1234.local with PID 22844 (/Users/john.doe/Development/examples/spring-actuator-example/target/spring-actuator-example-1.0.0.jar started by indra.basak in /Users/john.doe/Development/examples/spring-actuator-example)
+ :: Spring Boot ::        (v2.0.0.RELEASE)
 
 ...
-2017-10-17 22:24:24.168  INFO 22844 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2017-10-17 22:24:24.369  INFO 22844 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http)
-2017-10-17 22:24:24.374  INFO 22844 --- [           main] com.basaki.Application                   : Started Application in 5.172 seconds (JVM running for 5.616)
-2017-10-17 22:24:29.016  INFO 22844 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2017-10-17 22:24:29.016  INFO 22844 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2017-10-17 22:24:29.033  INFO 22844 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+completed in 1799 ms
+...
+2018-03-16 19:42:53.256  INFO 61043 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-16 19:42:53.346  INFO 61043 --- [           main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/myhealth],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+...
+43 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-16 19:42:53.967  INFO 61043 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-03-16 19:42:53.968  INFO 61043 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-03-16 19:42:53.982  INFO 61043 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2018-03-16 19:42:54.010  INFO 61043 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-03-16 19:42:54.127  INFO 61043 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-03-16 19:42:54.132  INFO 61043 --- [           main] com.basaki.Application                   : Started Application in 4.452 seconds (JVM running for 5.266)
 
 ```
 
-Once the application starts up, navigate to `http://localhost:8080/application/myhealth` in a browser, e.g., Chrome.
+Once the application starts up, navigate to `http://localhost:8080/myhealth` in a browser, e.g., Chrome.
 You should notice `myhealth` information as shown below,
 
 ![](./img/myhealth-endpoint.png)
@@ -53,3 +59,12 @@ You should notice `myhealth` information as shown below,
 
 [travis-badge]: https://travis-ci.org/indrabasak/spring-actuator-example.svg?branch=master
 [travis-badge-url]: https://travis-ci.org/indrabasak/spring-actuator-example/
+
+[sonarqube-badge]: https://sonarcloud.io/api/badges/gate?key=com.basaki:spring-actuator-example
+[sonarqube-badge-url]: https://sonarcloud.io/dashboard/index/com.basaki:spring-actuator-example
+
+[technical-debt-ratio-badge]: https://sonarcloud.io/api/badges/measure?key=com.basaki:spring-actuator-example&metric=sqale_debt_ratio
+[technical-debt-ratio-badge-url]: https://sonarcloud.io/dashboard/index/com.basaki:spring-actuator-example 
+
+[coverage-badge]: https://sonarcloud.io/api/badges/measure?key=com.basaki:spring-actuator-example&metric=coverage
+[coverage-badge-url]: https://sonarcloud.io/dashboard/index/com.basaki:spring-actuator-example

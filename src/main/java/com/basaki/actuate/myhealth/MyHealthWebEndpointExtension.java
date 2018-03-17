@@ -2,7 +2,7 @@ package com.basaki.actuate.myhealth;
 
 import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
 import org.springframework.boot.actuate.endpoint.web.WebEndpointResponse;
-import org.springframework.boot.actuate.endpoint.web.annotation.WebEndpointExtension;
+import org.springframework.boot.actuate.endpoint.web.annotation.EndpointWebExtension;
 
 /**
  * {@code MyHealthWebEndpointExtension} creates an extension for my health
@@ -12,7 +12,7 @@ import org.springframework.boot.actuate.endpoint.web.annotation.WebEndpointExten
  * @author Indra Basak
  * @since 10/17/17
  */
-@WebEndpointExtension(endpoint = MyHealthEndpoint.class)
+@EndpointWebExtension(endpoint = MyHealthEndpoint.class)
 public class MyHealthWebEndpointExtension {
 
     private final MyHealthEndpoint delegate;

@@ -4,19 +4,30 @@ info:
   description: Spring Boot Actuator Example
   version: 1.0.0
 
-#actuator endpoints
-endpoints:
-  default:
-    enabled: true
+#Exposes Spring actuator endpoints
+management:
   health:
-    enabled: true
+    diskspace:
+      enabled: true
+    db:
+      enabled: true
+    details:
+      enabled: true
+    application:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: "*"
   metrics:
-    enabled: true
-  loggers:
-    enabled: true
-  #custom endpoint
-  myhealth:
-    enabled: true
+    export:
+      datadog:
+        enabled: false
+
 
 #spring:
 #  metrics:
@@ -37,4 +48,3 @@ spring:
       server:
         auto-time-requests: true
 #    use-global-registry: true
-

@@ -1,8 +1,7 @@
 package com.basaki.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * {@code Book} represents a book entity.
@@ -11,9 +10,8 @@ import lombok.NoArgsConstructor;
  * @author Indra Basak
  * @since 10/17/17
  */
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Getter
+@Setter
 public class Book {
 
     private Integer id;

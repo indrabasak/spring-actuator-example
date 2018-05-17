@@ -60,11 +60,11 @@ You should notice `myhealth` information as shown below,
 [travis-badge]: https://travis-ci.org/indrabasak/spring-actuator-example.svg?branch=master
 [travis-badge-url]: https://travis-ci.org/indrabasak/spring-actuator-example/
 
-[sonarqube-badge]: https://sonarcloud.io/api/badges/gate?key=com.basaki:spring-actuator-example
+[sonarqube-badge]: https://sonarcloud.io/api/project_badges/measure?project=com.basaki%3Aspring-actuator-example&metric=alert_status
 [sonarqube-badge-url]: https://sonarcloud.io/dashboard/index/com.basaki:spring-actuator-example
 
-[technical-debt-ratio-badge]: https://sonarcloud.io/api/badges/measure?key=com.basaki:spring-actuator-example&metric=sqale_debt_ratio
+[technical-debt-ratio-badge]: https://sonarcloud.io/api/project_badges/measure?project=com.basaki%3Aspring-actuator-example&metric=sqale_index
 [technical-debt-ratio-badge-url]: https://sonarcloud.io/dashboard/index/com.basaki:spring-actuator-example 
 
-[coverage-badge]: https://sonarcloud.io/api/badges/measure?key=com.basaki:spring-actuator-example&metric=coverage
+[coverage-badge]: https://sonarcloud.io/api/project_badges/measure?project=com.basaki%3Aspring-actuator-example&metric=coverage
 [coverage-badge-url]: https://sonarcloud.io/dashboard/index/com.basaki:spring-actuator-example
